@@ -60,4 +60,4 @@ No options.
 
 ## License
 
-MIT [teppeis](https://github.com/teppeis)
+MIT License [teppeis](https://github.com/teppeis)
