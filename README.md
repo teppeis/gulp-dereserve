@@ -1,4 +1,4 @@
-# [gulp](http://gulpjs.com)-dereserve [![NPM version][npm-image]][npm-url] [![build status][travis-image]][travis-url]
+# [gulp](http://gulpjs.com)-dereserve [![NPM version][npm-image]][npm-url] [![build status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url]
 
 > gulp plugin to replace ES3 reserved keyword indentifiers
 
@@ -66,3 +66,5 @@ MIT License [teppeis](https://github.com/teppeis)
 [npm-url]: https://npmjs.org/package/gulp-dereserve
 [travis-image]: https://travis-ci.org/teppeis/gulp-dereserve.svg?branch=master
 [travis-url]: https://travis-ci.org/teppeis/gulp-dereverse
+[deps-image]: https://david-dm.org/teppeis/gulp-dereserve.svg
+[deps-url]: https://david-dm.org/teppeis/gulp-dereserve
