@@ -1,6 +1,6 @@
 {
   "name": "gulp-dereserve",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "gulp plugin to replace ES3 reserved keyword indentifiers",
   "license": "MIT",
   "repository": "teppeis/gulp-dereserve",
