@@ -2,6 +2,8 @@
 
 var assert = require('assert');
 var gutil = require('gulp-util');
+var es = require('event-stream');
+var stringToStream = require('string-to-stream');
 var dereserve = require('../');
 
 describe('dereserve', function() {
@@ -19,6 +21,27 @@ describe('dereserve', function() {
       base: __dirname,
       path: __dirname + '/file.js',
       contents: new Buffer('a.catch()')
+  }));
+
+  stream.end();
+  });
+
+  it('should work with stream.', function(cb) {
+  var stream = dereserve();
+
+  stream.on('data', function(file) {
+      assert.equal(file.relative, 'file.js');
+      file.contents.pipe(es.wait(function(err, data) {
+          assert(!err);
+          assert.equal(data, 'a["catch"]()');
+          cb();
+      }));
+  });
+
+  stream.write(new gutil.File({
+      base: __dirname,
+      path: __dirname + '/file.js',
+      contents: stringToStream('a.catch()')
   }));
 
   stream.end();
