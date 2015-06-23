@@ -1,9 +1,7 @@
 'use strict';
 
 var applySourceMap = require('vinyl-sourcemaps-apply');
-var convert = require('convert-source-map');
 var es3safe = require('es3-safe-recast');
-var esprima = require('esprima');
 var gutil = require('gulp-util');
 var recast = require('recast');
 var through = require('through2');
@@ -32,14 +30,11 @@ module.exports = function(options) {
 };
 
 function transform(file, source) {
-  var opt = {
-    esprima: esprima
-  };
-
   if (!es3safe.TEST_REGEX.test(source)) {
     return new Buffer(source);
   }
 
+  var opt = {};
   var inMap = file.sourceMap;
   if (inMap) {
     opt.sourceFileName = file.relative;
@@ -47,7 +42,7 @@ function transform(file, source) {
   }
 
   var ast = recast.parse(source, opt);
-  new es3safe.Visitor().visit(ast);
+  es3safe.visit(ast);
   var result = recast.print(ast, opt);
 
   if (inMap) {

@@ -1,6 +1,6 @@
 {
   "name": "gulp-dereserve",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "gulp plugin to replace ES3 reserved keyword indentifiers",
   "license": "MIT",
   "repository": "teppeis/gulp-dereserve",
@@ -22,13 +22,11 @@
     "gulpplugin"
   ],
   "dependencies": {
-    "bufferstreams": "^0.0.2",
-    "convert-source-map": "^0.4.1",
-    "es3-safe-recast": "^1.0.0",
-    "esprima": "^1.2.2",
+    "bufferstreams": "^1.0.2",
+    "es3-safe-recast": "^2.0.1",
     "gulp-util": "^3.0.1",
-    "recast": "^0.9.5",
-    "through2": "^0.6.3",
+    "recast": "^0.10.12",
+    "through2": "^2.0.0",
     "vinyl-sourcemaps-apply": "^0.1.4"
   },
   "devDependencies": {
