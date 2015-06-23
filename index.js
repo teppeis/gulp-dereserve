@@ -47,7 +47,7 @@ function transform(file, source) {
   }
 
   var ast = recast.parse(source, opt);
-  new es3safe.Visitor().visit(ast);
+  es3safe.visit(ast);
   var result = recast.print(ast, opt);
 
   if (inMap) {

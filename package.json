@@ -24,7 +24,7 @@
   "dependencies": {
     "bufferstreams": "^0.0.2",
     "convert-source-map": "^0.4.1",
-    "es3-safe-recast": "^1.0.0",
+    "es3-safe-recast": "^2.0.1",
     "esprima": "^1.2.2",
     "gulp-util": "^3.0.1",
     "recast": "^0.9.5",
