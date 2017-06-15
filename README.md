@@ -1,5 +1,7 @@
 # [gulp](http://gulpjs.com)-dereserve [![NPM version][npm-image]][npm-url] [![build status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/teppeis/gulp-dereserve.svg)](https://greenkeeper.io/)
+
 > gulp plugin to replace ES3 reserved keyword indentifiers
 
 IE8 cannot parse ES3 reserved keyword like `catch`.
